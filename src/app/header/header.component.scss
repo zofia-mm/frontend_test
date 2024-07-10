@@ -1,4 +1,6 @@
-@use "../../colors.scss";
+@use '../../styles/colors.scss' as colors;
+@use '../../styles/breakpoints.scss';
+
 
 :host {
   background-color: colors.$header-black;
@@ -12,11 +14,15 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+
+  @include breakpoints.desktop { & {
+    background-color: yellow;
+  } }
 }
 
 
 .logo-container{
-  background-color: colors.$fg-white;
+  background-color: colors.$logo-bg;
 
   height: fit-content;
   width: fit-content;
@@ -33,6 +39,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    filter: invert( 100% ); // svg color from default black to white
 
     height: 4rem;
     width: 4rem;
