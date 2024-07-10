@@ -4,7 +4,7 @@
   background-color: colors.$header-black;
   color: colors.$fg-white;
 
-  height: 5rem;
+  height: fit-content;
   width: 100vw;
   box-sizing: border-box;
   padding: 1rem;
@@ -12,4 +12,30 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+}
+
+
+.logo-container{
+  background-color: colors.$fg-white;
+
+  height: fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 0.4rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.2rem;
+
+  border-radius: 50%;
+  
+
+  .logo {
+    background-image: url('/assets/html5.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    height: 4rem;
+    width: 4rem;
+    margin: auto;
+  }
 }
