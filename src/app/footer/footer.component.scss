@@ -6,13 +6,38 @@
   color: c.$fg-white;
   border-top: 1px solid c.$header-black;
 
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 
   padding: 0.5rem 1rem;
 
   @include b.desktop {&{
     padding: 1.25rem 2.5rem;
   }}
+}
+
+.logo {
+  color: c.$fg-dark-grey;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 0.2rem;
+
+  justify-self: center;
+  align-self: center;
+
+  font-size: 1.5rem;
+
+  & .line {
+    height: 1px;
+    width: 2.5rem;
+    background-color: c.$fg-dark-grey;
+  }
+}
+
+button.show {
+  justify-self: end;
+  align-self: center;
 }
