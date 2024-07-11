@@ -19,6 +19,7 @@
 
 .logo {
   color: c.$fg-dark-grey;
+  font-size: 1.5rem;
 
   display: flex;
   flex-flow: row;
@@ -28,13 +29,16 @@
   justify-self: center;
   align-self: center;
 
-  font-size: 1.5rem;
-
   & .line {
     height: 1px;
     width: 2.5rem;
     background-color: c.$fg-dark-grey;
   }
+
+  visibility: hidden;
+  @include b.desktop {&{
+    visibility: visible;
+  }}
 }
 
 button.show {
