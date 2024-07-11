@@ -7,7 +7,13 @@
   width: fit-content;
 
   color: c.$fg-dark-grey;
-  &:hover { color: c.$fg-white }
+  &:hover {
+    color: c.$fg-white
+  }
+  &:hover .square {
+    transform: rotate(90deg);
+    border-color: c.$primary;
+  }
 
   & p { padding: 0.3rem; }
 
@@ -22,11 +28,6 @@
   border: 1px solid c.$fg-dark-grey;
 
   transition: transform 1s ease-in-out;
-
-  &:hover {
-    transform: rotate(90deg);
-    border-color: c.$primary;
-  }
 
   height: 3.2rem;
   width: 3.2rem;
