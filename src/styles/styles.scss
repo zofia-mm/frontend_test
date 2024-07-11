@@ -18,3 +18,10 @@ span.bold {
 span.thin {
   font-weight: 300;
 }
+
+button {
+  background-color: transparent;
+  color: c.$fg-white;
+  border: 1px solid c.$fg-white;
+  border-radius: 0.2rem;
+}

@@ -1,0 +1,28 @@
+@use '../../styles/colors.scss' as c;
+
+:host {
+  text-transform: uppercase;
+  position: relative;
+
+  color: c.$fg-dark-grey;
+  &:hover { color: c.$fg-white }
+
+  & p {
+    padding: 0.3rem;
+  }
+}
+
+.square {
+  position: absolute;
+  top: 0;
+  height: 3.2rem;
+  width: 3.2rem;
+  border: 1px solid c.$fg-dark-grey;
+
+  transition-duration: 1s;
+
+  &:hover {
+    transform: rotate(90deg);
+    border-color: c.$primary;
+  }
+}
