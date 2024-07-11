@@ -1,37 +1,47 @@
-@use '../../styles/colors.scss' as colors;
-@use '../../styles/breakpoints.scss';
+@use '../../styles/colors.scss' as c;
+@use '../../styles/breakpoints.scss' as b;
 
 
 :host {
-  background-color: colors.$header-black;
-  color: colors.$fg-white;
+  background-color: c.$header-black;
+  color: c.$fg-white;
 
   height: fit-content;
   width: 100vw;
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 0.7rem 1rem;
 
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  align-items: center;
 
-  @include breakpoints.desktop { & {
-  } }
+  @include b.desktop {&{
+    padding: 0.8rem 2.5rem;
+  }}
+
 }
 
 
 .logo-container{
-  background-color: colors.$logo-bg;
+  background-color: c.$logo-bg;
+  &:hover { background-color: c.$primary; }
+  &:active { background-color: c.$primary-pressed; }
 
   height: fit-content;
   width: fit-content;
+  border-radius: 50%;
+
   box-sizing: border-box;
   padding: 0.4rem;
-  padding-top: 0.6rem;
-  padding-bottom: 0.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.3rem;
 
-  border-radius: 50%;
-  
+  @include b.desktop {&{
+    padding: 0.6rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.4rem;
+  }}
 
   .logo {
     background-image: url('/assets/html5.svg');
@@ -40,8 +50,20 @@
     background-position: center;
     filter: invert( 100% ); // svg color from default black to white
 
-    height: 4rem;
-    width: 4rem;
+    height: 2rem;
+    width: 2rem;
     margin: auto;
+
+    @include b.desktop {&{
+      height: 3.5rem;
+      width: 3.5rem;
+    }}
   }
+}
+
+.header-text {
+  font-size: 14px;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
 }

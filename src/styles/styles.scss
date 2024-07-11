@@ -8,4 +8,13 @@ body {
   background-color: c.$surface-grey;
   font-family: 'Lato';
   font-size: 12px;
+  font-weight: 400;
+}
+
+span.bold {
+  font-weight: 900;
+}
+
+span.thin {
+  font-weight: 300;
 }
