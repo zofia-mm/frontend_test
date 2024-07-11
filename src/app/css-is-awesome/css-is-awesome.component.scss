@@ -4,6 +4,7 @@
 :host {
   text-transform: uppercase;
   position: relative;
+  width: fit-content;
 
   color: c.$fg-dark-grey;
   &:hover { color: c.$fg-white }
@@ -20,7 +21,7 @@
   top: 0;
   border: 1px solid c.$fg-dark-grey;
 
-  transition-duration: 1s;
+  transition: transform 1s ease-in-out;
 
   &:hover {
     transform: rotate(90deg);
