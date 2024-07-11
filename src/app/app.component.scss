@@ -1,0 +1,12 @@
+header {
+  position: fixed;
+}
+
+.main-and-footer {
+  padding-top: 5rem; // accounting for header
+  min-height: calc(100vh - 5rem);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
