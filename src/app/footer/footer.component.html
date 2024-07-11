@@ -3,11 +3,6 @@
   <div class="line"></div> <p>nabthat</p> <div class="line"></div>
 </div>
 <div class="show-button-container">
-  <button
-    class="show"
-    [ngClass]="settingsPopupVisible ? 'settings-button__hidden' : '' "
-    (click)="showSettingsPopup()"
-  > pokaż </button>
   <div
     class="settings-popup"
     [ngClass]="settingsPopupVisible ? '' : 'settings-popup__hidden' "
@@ -15,4 +10,9 @@
     <button (click)="resetSettings()"> zresetuj ustawienia </button>
     <button (click)="showPersonalData()"> pokaż dane osobowe </button>
   </div>
+  <button
+    class="settings-button"
+    [ngClass]="settingsPopupVisible ? 'settings-button__hidden' : '' "
+    (click)="showSettingsPopup()"
+  > pokaż </button>
 </div>

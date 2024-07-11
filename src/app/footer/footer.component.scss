@@ -44,17 +44,13 @@
 .show-button-container {
   justify-self: end;
   align-self: center;
-
+  
   display: flex;
   justify-content: end;
 }
 
-button.settings-button {
-  align-self: flex-end;
-}
-
 button.settings-button__hidden {
-  visibility: collapse;
+  display: none;
 }
 
 .settings-popup {
@@ -66,5 +62,5 @@ button.settings-button__hidden {
 }
 
 .settings-popup__hidden {
-  visibility: collapse;
+  display: none;
 }
