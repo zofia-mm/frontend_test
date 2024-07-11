@@ -66,4 +66,9 @@
   display: flex;
   flex-flow: column;
   align-items: flex-end;
+
+  @include b.desktop {&{
+    font-size: 1.7rem;
+    letter-spacing: 0.05rem;
+  }}
 }
