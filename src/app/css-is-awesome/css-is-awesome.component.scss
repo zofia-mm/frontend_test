@@ -1,4 +1,5 @@
 @use '../../styles/colors.scss' as c;
+@use '../../styles/breakpoints.scss' as b;
 
 :host {
   text-transform: uppercase;
@@ -7,16 +8,16 @@
   color: c.$fg-dark-grey;
   &:hover { color: c.$fg-white }
 
-  & p {
-    padding: 0.3rem;
-  }
+  & p { padding: 0.3rem; }
+
+  @include b.desktop {&{
+    font-size: 1.3rem;
+  }}
 }
 
 .square {
   position: absolute;
   top: 0;
-  height: 3.2rem;
-  width: 3.2rem;
   border: 1px solid c.$fg-dark-grey;
 
   transition-duration: 1s;
@@ -25,4 +26,11 @@
     transform: rotate(90deg);
     border-color: c.$primary;
   }
+
+  height: 3.2rem;
+  width: 3.2rem;
+  @include b.desktop {&{
+    height: 5.4rem;
+    width: 5.4rem;
+  }}
 }
