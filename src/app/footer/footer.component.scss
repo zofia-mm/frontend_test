@@ -41,7 +41,30 @@
   }}
 }
 
-button.show {
+.show-button-container {
   justify-self: end;
   align-self: center;
+
+  display: flex;
+  justify-content: end;
+}
+
+button.settings-button {
+  align-self: flex-end;
+}
+
+button.settings-button__hidden {
+  visibility: collapse;
+}
+
+.settings-popup {
+  background-color: c.$fg-white;
+  & button { color: c.$fg-dark-grey; }
+
+  display: flex;
+  flex-flow: column;
+}
+
+.settings-popup__hidden {
+  visibility: collapse;
 }
