@@ -2,17 +2,36 @@
 <div class="logo">
   <div class="line"></div> <p>nabthat</p> <div class="line"></div>
 </div>
+
 <div class="show-button-container">
+
+  <button
+  class="settings-button"
+  [ngClass]="settingsPopupVisible ? 'settings-button__hidden' : '' "
+  (click)="showSettingsPopup()"
+  >
+    pokaż
+    <span class="material-symbols-outlined">
+      keyboard_arrow_down
+    </span>
+  </button>
+
   <div
     class="settings-popup"
     [ngClass]="settingsPopupVisible ? '' : 'settings-popup__hidden' "
   >
-    <button (click)="resetSettings()"> zresetuj ustawienia </button>
-    <button (click)="showPersonalData()"> pokaż dane osobowe </button>
+    <button (click)="resetSettings()">
+      <span class="material-symbols-outlined">
+        chevron_right
+      </span>
+      zresetuj ustawienia
+    </button>
+    <button (click)="showPersonalData()">
+      <span class="material-symbols-outlined">
+        chevron_right
+      </span>
+      pokaż dane osobowe
+    </button>
   </div>
-  <button
-    class="settings-button"
-    [ngClass]="settingsPopupVisible ? 'settings-button__hidden' : '' "
-    (click)="showSettingsPopup()"
-  > pokaż </button>
+
 </div>

@@ -49,6 +49,15 @@
   justify-content: end;
 }
 
+button.settings-button {
+  width: 13rem;
+  padding: 0.4rem;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
 button.settings-button__hidden {
   display: none;
 }
@@ -56,9 +65,21 @@ button.settings-button__hidden {
 .settings-popup {
   background-color: c.$fg-white;
   & button { color: c.$fg-dark-grey; }
+  & button:hover { color: c.$primary; }
+  & button:active { color: c.$primary-pressed; }
 
   display: flex;
   flex-flow: column;
+  align-items: start;
+  width: 13rem;
+  padding: 0.5rem;
+
+  & button {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
 }
 
 .settings-popup__hidden {
