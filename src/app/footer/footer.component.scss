@@ -41,21 +41,22 @@
 }
 
 .settings-button-container {
-  justify-self: end;
+  justify-self: flex-end;
   align-self: center;
   grid-column: 3;
   
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 button.settings-button {
-  width: 13rem;
-  padding: 0.4rem;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
+  color: c.$fg-grey;
+  border-color: c.$fg-dark-grey;
+
+  width: 10.5rem;
+  @include b.desktop {&{
+    width: 14rem;
+  }}
 }
 
 button.settings-button__hidden {
@@ -70,16 +71,20 @@ button.settings-button__hidden {
 
   display: flex;
   flex-flow: column;
-  align-items: start;
-  width: 13rem;
-  padding: 0.5rem;
+  align-items: flex-start;
 
   & button {
     display: flex;
     align-items: center;
-    padding: 0;
+    padding: 0.2rem;
   }
 
+  width: 10.5rem;
+
+  @include b.desktop {&{
+    width: 14rem;
+    padding: 0.2rem;
+  }}
 }
 
 .settings-popup__hidden {
