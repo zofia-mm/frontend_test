@@ -21,7 +21,6 @@
   color: c.$fg-dark-grey;
   font-size: 1.5rem;
 
-  display: flex;
   flex-flow: row;
   align-items: center;
   gap: 0.2rem;
@@ -35,15 +34,16 @@
     background-color: c.$fg-dark-grey;
   }
 
-  visibility: hidden;
+  display: none;
   @include b.desktop {&{
-    visibility: visible;
+    display: flex;
   }}
 }
 
-.show-button-container {
+.settings-button-container {
   justify-self: end;
   align-self: center;
+  grid-column: 3;
   
   display: flex;
   justify-content: end;
