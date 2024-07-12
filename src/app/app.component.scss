@@ -13,5 +13,6 @@ header {
 
   @include b.desktop {&{
     padding-top: 7rem; // accounting for header
+    min-height: calc(100vh - 7rem);
   }}
 }
