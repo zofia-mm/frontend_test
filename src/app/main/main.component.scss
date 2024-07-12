@@ -1,0 +1,52 @@
+@use '../../styles/colors.scss' as c;
+@use '../../styles/breakpoints.scss' as b;
+
+
+:host {
+  color: c.$fg-grey;
+}
+
+
+.h1-container {
+  color: c.$fg-white;
+
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 0.6rem;
+
+  & hr {
+    border: 0.5px solid c.$fg-white;
+    width: 6rem;
+  }
+
+  @include b.desktop {&{
+    padding-top: 2.5rem;
+    gap: 1rem;
+    & hr { width: 11rem; }
+  }}
+}
+
+
+.action-blocks {
+  display: flex;
+  flex-flow: row;
+
+  & .block {
+    flex: 1;
+  }
+}
+
+.blocks {
+  display: flex;
+  flex-flow: column;
+
+  @include b.desktop {&{
+    flex-flow: row;
+    & .block { flex: 1; }
+    & .action-blocks { flex: 2; }
+  }}
+}
+
+
