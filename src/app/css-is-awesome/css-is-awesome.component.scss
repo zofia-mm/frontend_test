@@ -15,7 +15,10 @@
     border-color: c.$primary;
   }
 
-  & p { padding: 0.3rem; }
+  & p {
+    padding: 0.3rem;
+    user-select: none;
+  }
 
   @include b.desktop {&{
     font-size: 1.3rem;
