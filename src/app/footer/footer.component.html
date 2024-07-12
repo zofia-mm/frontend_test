@@ -19,6 +19,7 @@
   <div
     class="settings-popup"
     [ngClass]="settingsPopupVisible ? '' : 'settings-popup__hidden' "
+    (click)="hideSettingsPopup()"
   >
     <button (click)="resetSettings()">
       <span class="material-symbols-outlined">
