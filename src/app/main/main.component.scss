@@ -26,6 +26,7 @@
     padding-top: 2.5rem;
     gap: 1rem;
     & hr { width: 11rem; }
+    margin-bottom: 2rem;
   }}
 }
 
@@ -37,6 +38,10 @@
   & .block {
     flex: 1;
   }
+
+  @include b.desktop {&{
+    gap: 3rem;
+  }}
 }
 
 .blocks {
@@ -47,14 +52,20 @@
 
   @include b.desktop {&{
     flex-flow: row;
-    & .block { flex: 1; }
+    & .block-3 { flex: 1; min-width: 0; }
     & .action-blocks { flex: 2; }
+  }}
+
+  @include b.desktop {&{
+    padding: 3rem;
+    gap: 3rem;
   }}
 }
 
 .block {
   h6 {
     padding-bottom: 1.5rem;
+    @include b.desktop {&{ padding-bottom: 3rem; }}
   }
 }
 
@@ -69,6 +80,11 @@
       flex-flow: row;
       align-items: center;
     }
+
+    @include b.desktop {&{
+      gap: 1rem;
+      .radio-button { font-size: 1.1rem; }
+    }}
   }
 
   input {
@@ -77,6 +93,12 @@
     width: 1.2rem;
     background-color: transparent;
     color: transparent;
+
+    @include b.desktop {&{
+      height: 2rem;
+      width: 2rem;
+      margin-right: 1rem;
+    }}
   }
 }
 
@@ -96,6 +118,20 @@
     border-color: c.$fg-grey;
     color: c.$fg-grey;
   }
+
+  @include b.desktop {&{
+    align-items: center;
+
+    button {
+      width: 9rem;
+      font-size: 0.8rem;
+    } 
+
+    .buttons {
+      flex-flow: row;
+      gap: 2rem;
+    }
+  }}
 }
 
 .block-3 {
@@ -103,4 +139,8 @@
   font-size: 0.7rem;
   text-align: center;
   font-weight: 200;
+
+  @include b.desktop {&{
+    font-size: 0.9rem;
+  }}
 }

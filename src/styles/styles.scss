@@ -71,4 +71,9 @@ h6 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+
+  @include b.desktop {&{
+    font-size: 1.01rem;
+    text-align: center;
+  }}
 }
