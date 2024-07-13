@@ -9,30 +9,27 @@
 
     <div class="block block-1">
       <h6> blok pierwszy </h6>
-      <div>
-        <input type="radio" name="opcja" id="pierwsza">
-        <label for="pierwsza">pierwsza</label>
-      </div>
-      <div>
-        <input type="radio" name="opcja" id="druga">
-        <label for="druga">druga</label>
-      </div>
-      <div>
-        <input type="radio" name="opcja" id="losowa">
-        <label for="losowa">losowa</label>
+      <div class="radio-buttons">
+        <div class="radio-button"
+          *ngFor="let option of [ 'pierwsza', 'druga', 'losowa' ]">
+          <input type="radio" name="opcja" id="{{option}}">
+          <label for="{{option}}">Opcja {{option}}</label>
+        </div>
       </div>
     </div>
 
     <div class="block block-2">
       <h6> blok drugi </h6>
-      <button> zastąp </button>
-      <button> doklej </button>
+      <div class="buttons">
+        <button> zastąp </button>
+        <button> doklej </button>
+      </div>
     </div>
 
   </div>
   
   <div class="block display-block block-3">
-    <h6> blok z długą nazwą która sama się przytnie </h6>
+    <h6> blok z długą nazwą która sama się przytnie bo jest długa </h6>
     <div>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

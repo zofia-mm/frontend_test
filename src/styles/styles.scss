@@ -9,7 +9,7 @@ body {
   background-color: c.$surface-grey;
   font-family: 'Lato';
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 span.bold {
@@ -61,4 +61,14 @@ h1 {
   @include b.desktop {&{
     transform: none;
   }}
+}
+
+h6 {
+  color: c.$fg-white;
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

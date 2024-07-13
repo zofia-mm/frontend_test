@@ -15,6 +15,7 @@
   flex-flow: column;
   align-items: center;
   gap: 0.6rem;
+  margin-bottom: 1rem;
 
   & hr {
     border: 0.5px solid c.$fg-white;
@@ -41,6 +42,8 @@
 .blocks {
   display: flex;
   flex-flow: column;
+  padding: 1.2rem;
+  gap: 2rem;
 
   @include b.desktop {&{
     flex-flow: row;
@@ -49,4 +52,55 @@
   }}
 }
 
+.block {
+  h6 {
+    padding-bottom: 1.5rem;
+  }
+}
 
+.block-1 {
+  .radio-buttons {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+
+    .radio-button {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+    }
+  }
+
+  input {
+    margin-right: 0.5rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: transparent;
+    color: transparent;
+  }
+}
+
+.block-2 {
+  display: flex;
+  flex-flow: column;
+  align-items: end;
+
+  .buttons {
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+  }
+
+  button {
+    width: 7rem;
+    border-color: c.$fg-grey;
+    color: c.$fg-grey;
+  }
+}
+
+.block-3 {
+  color: c.$fg-article-gray;
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: 200;
+}
