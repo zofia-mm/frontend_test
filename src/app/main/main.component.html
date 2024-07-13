@@ -10,10 +10,11 @@
     <div class="block block-1">
       <h6> blok pierwszy </h6>
       <div class="radio-buttons">
+        <!-- using a list of enums instead of enum | keyvalue because of set options order -->
         <div class="radio-button"
-          *ngFor="let option of [ 'pierwsza', 'druga', 'losowa' ]">
-          <input type="radio" name="opcja" id="{{option}}">
-          <label for="{{option}}">Opcja {{option}}</label>
+          *ngFor="let option of [ArticleOptions.First, ArticleOptions.Second, ArticleOptions.Random]">
+          <input type="radio" name="opcja" [value]="option" [(ngModel)]="articleOption">
+          <label for="{{option}}">Opcja {{option.valueOf()}}</label>
         </div>
       </div>
     </div>
@@ -21,7 +22,7 @@
     <div class="block block-2">
       <h6> blok drugi </h6>
       <div class="buttons">
-        <button> zastąp </button>
+        <button (click)="showArticle()"> zastąp </button>
         <button> doklej </button>
       </div>
     </div>
