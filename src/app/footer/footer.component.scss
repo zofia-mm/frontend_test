@@ -116,14 +116,5 @@ button.settings-button__hidden {
 
 .popup__hidden {
   height: 7rem;
-  * { display: none;  }
-}
-
-.arrow-down {
-  transform: rotate( 0 );
-}
-
-.arrow-up {
-  transform: rotate( -180deg );
-  transition: 1s;
+  & > * { display: none;  }
 }
