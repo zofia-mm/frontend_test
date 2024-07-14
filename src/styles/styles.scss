@@ -53,16 +53,6 @@ h1 {
   }}
 }
 
-.material-symbols-outlined {
-  height: 1rem;
-  margin-top: -0.3rem;
-  transform: scale(0.8);
-
-  @include b.desktop {&{
-    transform: none;
-  }}
-}
-
 h6 {
   color: c.$fg-white;
   font-size: 0.8rem;
@@ -76,4 +66,12 @@ h6 {
     font-size: 1.01rem;
     text-align: center;
   }}
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }

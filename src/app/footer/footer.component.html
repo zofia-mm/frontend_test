@@ -1,38 +1,43 @@
-<app-css-is-awesome></app-css-is-awesome>
-<div class="logo">
-  <div class="line"></div> <p>nabthat</p> <div class="line"></div>
+<div class="footer-content">
+
+  <app-css-is-awesome></app-css-is-awesome>
+
+  <div class="logo">
+    <div class="line"></div> <p>nabthat</p> <div class="line"></div>
+  </div>
+
+  <div class="settings-button-container">
+
+    <button
+    class="settings-button button-with-icon"
+    (click)="showSettingsPopup()"
+    >
+      pokaż
+      <span class="material-symbols-outlined"
+      [ngClass]="settingsPopupVisible ? 'arrow-up' : '' ">
+        keyboard_arrow_down
+      </span>
+    </button>
+
+  </div>
+
 </div>
 
-<div class="settings-button-container">
+<div class="popup settings-popup"
+  [ngClass]=" settingsPopupVisible ? '' : 'popup__hidden' "
+  (mouseleave)="hideSettingsPopup()" >
 
-  <button
-  class="settings-button button-with-icon"
-  [ngClass]="settingsPopupVisible ? 'settings-button__hidden' : '' "
-  (click)="showSettingsPopup()"
-  >
-    pokaż
+  <button (click)="resetSettings()">
     <span class="material-symbols-outlined">
-      keyboard_arrow_down
+      chevron_right
     </span>
+    zresetuj ustawienia
   </button>
-
-  <div
-    class="settings-popup"
-    [ngClass]="settingsPopupVisible ? '' : 'settings-popup__hidden' "
-    (mouseleave)="hideSettingsPopup()"
-  >
-    <button (click)="resetSettings()">
-      <span class="material-symbols-outlined">
-        chevron_right
-      </span>
-      zresetuj ustawienia
-    </button>
-    <button (click)="showPersonalData()">
-      <span class="material-symbols-outlined">
-        chevron_right
-      </span>
-      pokaż dane osobowe
-    </button>
-  </div>
+  <button (click)="showPersonalData()">
+    <span class="material-symbols-outlined">
+      chevron_right
+    </span>
+    pokaż dane osobowe
+  </button>
 
 </div>
