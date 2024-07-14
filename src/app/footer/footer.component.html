@@ -10,11 +10,11 @@
 
     <button
     class="settings-button button-with-icon"
-    (click)="showSettingsPopup()"
+    (click)="!settingsPopupVisible ? showSettingsPopup() : hideSettingsPopup()"
     >
       pokaż
-      <span class="material-symbols-outlined"
-      [ngClass]="settingsPopupVisible ? 'arrow-up' : 'arrow-down' ">
+      <span class="material-symbols-outlined arrow"
+      [ngClass]="settingsPopupVisible ? 'arrow__up' : '' ">
         keyboard_arrow_down
       </span>
     </button>
