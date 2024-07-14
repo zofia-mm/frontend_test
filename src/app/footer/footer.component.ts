@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,10 +7,15 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent
 {
+  @Output() hidePersonalData : EventEmitter<any> = new EventEmitter;
+  @Output() showPersonalData : EventEmitter<any> = new EventEmitter;
+
   settingsPopupVisible = false;
   hideSettingsPopup() { this.settingsPopupVisible = false; }
   showSettingsPopup() { this.settingsPopupVisible = true; }
 
-  resetSettings() { this.hideSettingsPopup() }
-  showPersonalData() { this.hideSettingsPopup() }
+  resetSettings() {
+    this.hideSettingsPopup();
+
+  }
 }

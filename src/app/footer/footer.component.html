@@ -27,13 +27,13 @@
   [ngClass]=" settingsPopupVisible ? '' : 'popup__hidden' "
   (mouseleave)="hideSettingsPopup()" >
 
-  <button (click)="resetSettings()">
+  <button (click)="hidePersonalData.emit()">
     <span class="material-symbols-outlined">
       chevron_right
     </span>
     zresetuj ustawienia
   </button>
-  <button (click)="showPersonalData()">
+  <button (click)="showPersonalData.emit()">
     <span class="material-symbols-outlined">
       chevron_right
     </span>

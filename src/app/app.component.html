@@ -1,11 +1,14 @@
 <header>
-  <app-header></app-header>
+  <app-header [personalDataVisible]="personalDataVisible"></app-header>
 </header>
 <div class="main-and-footer">
   <main>
     <app-main></app-main>
   </main>
   <footer>
-    <app-footer></app-footer>
+    <app-footer
+      (hidePersonalData)="hidePersonalData()"
+      (showPersonalData)="showPersonalData()">
+    </app-footer>
   </footer>
 </div>

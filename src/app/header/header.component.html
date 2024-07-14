@@ -3,5 +3,7 @@
 </div>
 <div class="header-text">
   <div> Zadanie <span class="bold"> rekrutacyjne </span> </div>
-  <div> <span class="thin"> Zofia Machalska </span> </div>
+  <div [ngClass]="personalDataVisible ? '' : 'personal-data__hidden'">
+    <span class="thin"> Zofia Machalska </span>
+  </div>
 </div>
