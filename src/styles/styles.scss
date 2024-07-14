@@ -68,10 +68,12 @@ h6 {
   }}
 }
 
+
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-size: 1.2rem;
+
+  @include b.desktop {&{
+    font-size: 1rem;
+  }}
 }
+
