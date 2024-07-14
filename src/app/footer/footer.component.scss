@@ -1,6 +1,10 @@
 @use '../../styles/colors.scss' as c;
 @use '../../styles/breakpoints.scss' as b;
 
+:host {
+  display: block;
+  position: relative;
+}
 
 .footer-content {
   background-color: c.$footer-black;
@@ -113,6 +117,10 @@ button.settings-button__hidden {
 .popup__hidden {
   height: 7rem;
   * { display: none;  }
+}
+
+.arrow-down {
+  transform: rotate( 0 );
 }
 
 .arrow-up {
