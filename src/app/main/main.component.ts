@@ -17,6 +17,9 @@ export class MainComponent
   articlesShown: Article[] = [];
   articlesShownIs: number[] = [];
 
+  private ALERT__NO_ARTICLES_LEFT = "Nie ma więcej nowych artykułów.";
+  private ALERT__THIS_ARTICLE_PRESENT = "Ten artykuł już został wybrany."; 
+
   determineI( it: any[] ) {
     return this.articleOption == ArticleOptions.First ? 0
     : this.articleOption == ArticleOptions.Second ? 1
@@ -31,6 +34,7 @@ export class MainComponent
     this.articleService.getArticles().subscribe( it => { 
       const articleI = this.determineI( it );
       this.articlesShown.push( it[ articleI ] );
+      this.articlesShownIs.push( articleI );
     } );
   }
 
@@ -38,15 +42,24 @@ export class MainComponent
   {
     this.articleService.getArticles().subscribe( it => {
 
-      const articleI = this.determineI( it );
-
-      console.log( articleI, this.articlesShownIs );
-      if( this.articlesShownIs.includes( articleI ) ) {
-        alert( 'cannot append - duplicate' );
+      console.log( this.articlesShownIs )
+      if(( this.articleOption == ArticleOptions.First && this.articlesShownIs.includes( 0 ) )
+      || ( this.articleOption == ArticleOptions.Second && this.articlesShownIs.includes( 1 ) ) ) {
+        alert( this.ALERT__THIS_ARTICLE_PRESENT );
         return;
       }
-      this.articlesShownIs.push( articleI );
 
+      if( this.articlesShownIs.length == 6 ) {
+        alert( this.ALERT__NO_ARTICLES_LEFT );
+        return;
+      }
+
+      var articleI = this.determineI( it );
+      while( this.articlesShownIs.includes( articleI ) ) {
+        articleI = this.determineI( it )
+      }
+
+      this.articlesShownIs.push( articleI );
       this.articlesShown.push( it[ articleI ] );
 
       this.articlesShown = this.articlesShown
