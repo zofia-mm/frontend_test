@@ -23,6 +23,17 @@ span.thin {
 button {
   background-color: transparent;
   color: c.$fg-white;
+  &:hover {
+    background-color: c.$primary;
+    color: c.$fg-white !important;
+    border-color: c.$fg-white !important;
+  }
+  &:active {
+    background-color: c.$primary-pressed;
+    color: c.$fg-white !important;
+    border-color: c.$fg-white !important;
+  }
+
   border: 1px solid c.$fg-white;
   border-radius: 0.2rem;
   text-transform: uppercase;
