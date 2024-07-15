@@ -23,8 +23,10 @@
   }
 
   @include b.desktop {&{
-    font-size: 1.37rem;
-    & p { line-height: 1.7rem; }
+    & p {
+      line-height: 1.7rem;
+      font-size: 1.37rem !important;
+    }
   }}
 }
 
