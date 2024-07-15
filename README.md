@@ -1,5 +1,9 @@
 # Zadanie rekrutacyjne - rozwiązanie
 
+Zobacz działającą stronę! https://zofia-mm.github.io/frontend_test/
+
+### Spełnione dodatkowe plusy:
+
 - Implementacja - Angular + SCSS.
 
 - Brak plików graficznych w końcowym projekcie. Jedynym svg jest sama ikonka html5.
